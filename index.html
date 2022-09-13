@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7f60fa0aee.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Finance manager</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1><i class="fa-solid fa-piggy-bank"></i>Wallet</h1>
+      <p>Your personal financial manager</p>
+    </header>
+
+    <main>
+      <section class="transactions">
+        <h2 class="title">List of transactions</h2>
+        <div class="transaction-list">
+          <div class="income-area">
+            <h3>Money Income</h3>
+           
+          </div>
+
+          <div class="expenses-area">
+            <h3>Expenses:</h3>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="options">
+        <div>
+          <h2 class="title">Available funds:</h2>
+          <p class="available-money">0zł</p>
+        </div>
+        <div class="controls">
+          <button class="add-transaction">
+            <i class="fa-solid fa-plus"></i> Add transaction
+          </button>
+          <button class="delete-all">
+            <i class="fa-regular fa-trash-can"></i> Delete all
+          </button>
+        </div>
+        <div class="style-selection">
+          <h2 class="title">Choose a style</h2>
+          <div class="color-buttons">
+            <button class="light"></button>
+            <button class="dark"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="add-transaction-panel">
+      <h2 class="title" >Add new transaction</h2>
+      <label for="name">Name transaction:</label>
+      <small>(enter the name of the transaction)</small>
+      <input type="text" id="name" />
+
+      <label for="amount">Amount transaction:</label>
+      <small
+        >( enter the amount of the transaction, if you are adding an expense,
+        put a minus sign at the beginning of the amount)</small
+      >
+      <input type="number" id="amount" />
+
+      <label for="category">Select a category:</label>
+      <small>(" + " income, " - "amount )</small>
+      <select id="category" onchange="selectCat()">
+        <option value="none" selected disabled></option>
+        <option value="income">" + " Income</option>
+        <option value="shopping">" - " Shopping</option>
+        <option value="food">" - " Food</option>
+        <option value="entertainment">" - " Entertainment</option>
+      </select>
+      <div class="panel-buttons">
+        <button class="save"><i class="fa-solid fa-check"></i> Save</button>
+        <button class="cancel"><i class="fa-solid fa-ban"></i> Cancel</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

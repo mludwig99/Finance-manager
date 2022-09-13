@@ -1,0 +1,75 @@
+.transactions {
+  width: 1000px;
+
+  h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+  }
+}
+.transaction-list {
+  display: flex;
+
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+    
+  }
+  & .transaction:last-child{
+        border-bottom: none;
+    }
+    .transaction-name{
+        font-size: 18px;
+
+        i{
+            font-size: 1.4rem;
+            margin-right: 12px;
+        }
+    }
+
+  .income-area {
+    margin: 0 20px;
+    padding: 30px;
+    width: 50%;
+    border: 1px solid $border-color;
+
+    h3,
+    .transaction-amount {
+      color: rgb(13, 150, 79);
+      font-weight: bold;
+    }
+  }
+  .expenses-area {
+    margin: 0 20px;
+    padding: 30px;
+    width: 50%;
+    border: 1px solid $border-color;
+
+    h3,
+    .transaction-amount {
+      color: rgb(237, 126, 29);
+      font-weight: bold;
+    }
+
+
+   
+  }
+}
+
+
+.delete{
+    margin-left: 12px;
+    background: none;
+    border: none;
+    font-size: $second-color;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all .3s linear;
+
+    
+}
+.delete:hover{
+    transform: scale(1.3);
+}

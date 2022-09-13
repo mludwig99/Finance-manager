@@ -1,0 +1,15 @@
+header{
+   @include display-center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 180px;
+
+    h1{
+        margin-bottom: 10pxpx;
+        font-size: 44px;
+        font-weight: $light-font-weight;
+    }
+    & p{
+        font-size: 22px;
+    }
+}

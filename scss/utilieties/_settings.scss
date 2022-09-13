@@ -1,0 +1,24 @@
+// 
+// 
+// _settings.scss - Site settings styles (variables & definitions)
+
+
+
+
+$first-color:#f9f9f9;
+$second-color:#14161f;
+$border-color:rgb(0,0,0, .2);
+$light-font-weight: 200;
+
+
+
+
+
+// mixin
+
+
+@mixin display-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};

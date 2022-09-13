@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: #14161f;
+  background-color: #f9f9f9;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 180px;
+}
+header h1 {
+  margin-bottom: 10pxpx;
+  font-size: 44px;
+  font-weight: 200;
+}
+header p {
+  font-size: 22px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h2.title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.transactions {
+  width: 1000px;
+}
+.transactions h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.transaction-list {
+  display: flex;
+}
+.transaction-list .transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.transaction-list .transaction:last-child {
+  border-bottom: none;
+}
+.transaction-list .transaction-name {
+  font-size: 18px;
+}
+.transaction-list .transaction-name i {
+  font-size: 1.4rem;
+  margin-right: 12px;
+}
+.transaction-list .income-area {
+  margin: 0 20px;
+  padding: 30px;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.transaction-list .income-area h3,
+.transaction-list .income-area .transaction-amount {
+  color: rgb(13, 150, 79);
+  font-weight: bold;
+}
+.transaction-list .expenses-area {
+  margin: 0 20px;
+  padding: 30px;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.transaction-list .expenses-area h3,
+.transaction-list .expenses-area .transaction-amount {
+  color: rgb(237, 126, 29);
+  font-weight: bold;
+}
+
+.delete {
+  margin-left: 12px;
+  background: none;
+  border: none;
+  font-size: #14161f;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.delete:hover {
+  transform: scale(1.3);
+}
+
+.options {
+  padding: 20px 20px;
+  width: 400px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  margin-right: 2rem;
+}
+.options .available-money {
+  margin-top: -1rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.options .controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.options .controls i {
+  margin-right: 10px;
+}
+.options .controls button {
+  padding: 10px 22px;
+  color: #14161f;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.options .controls button:hover {
+  color: #f9f9f9;
+  background-color: #14161f;
+}
+
+.style-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.style-selection button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin: 0 3rem;
+  transition: 0.3s all linear;
+}
+.style-selection button:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.style-selection button.light {
+  background: rgba(153, 255, 182, 0.6);
+}
+.style-selection button.dark {
+  background-color: #14161f;
+}
+
+.add-transaction-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(39, 193, 147) 73%, rgb(0, 212, 255) 100%);
+}
+.add-transaction-panel h2.title {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.add-transaction-panel label {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+.add-transaction-panel small {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: rgb(231, 231, 231);
+}
+.add-transaction-panel input,
+.add-transaction-panel select {
+  width: 600px;
+  text-align: center;
+}
+.add-transaction-panel input,
+.add-transaction-panel select,
+.add-transaction-panel button {
+  padding: 10px 20px;
+  border: solid 1px black;
+  border-radius: 10px;
+  font-size: 1.8rem;
+}
+.add-transaction-panel option {
+  font-size: 1.8rem;
+}
+
+.add-transaction-panel .panel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+.add-transaction-panel .panel-buttons button {
+  margin: 0 2.5rem;
+  font-size: 1.8rem;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.add-transaction-panel button:hover {
+  background-color: rgba(25, 25, 50, 0.8);
+}
