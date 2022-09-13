@@ -50,10 +50,10 @@
     transform: scale(0.9);
   }
   button.light{
-    background:rgba(153, 255, 182, 0.6);
+    background:rgb(219, 251, 155, 0.5);
     
   }
   button.dark{
-    background-color: $second-color;
+    background-color: $bacground-dark-color;
   }
 }

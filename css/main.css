@@ -15,6 +15,11 @@ body {
   color: #14161f;
   background-color: #f9f9f9;
   font-size: 1.6rem;
+  background-color: rgba(219, 251, 155, 0.5);
+}
+
+.dark-bacground {
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 header {
@@ -163,10 +168,10 @@ h2.title {
   transform: scale(0.9);
 }
 .style-selection button.light {
-  background: rgba(153, 255, 182, 0.6);
+  background: rgba(219, 251, 155, 0.5);
 }
 .style-selection button.dark {
-  background-color: #14161f;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 .add-transaction-panel {
